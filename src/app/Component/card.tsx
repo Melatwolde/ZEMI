@@ -42,9 +42,9 @@ const Card = () => {
     e.preventDefault();
     const newSongData = {
       ...newSong,
-      id: 1, // Set the new song's ID to 1
+      id: 1, //here it always update the added song ID to 1
     };
-    // Adjust the ID of the existing songs
+    // Adjusts the ID of the existing songs
     const updatedSongs = songs.map(song => ({ ...song, id: song.id + 1 }));
     setSongs([newSongData, ...updatedSongs]); // Add new song to the beginning of the list
     handleModalClose(); // Close the modal
@@ -105,7 +105,7 @@ const Card = () => {
         />
       </div>
       <div className='-mt-12 ml-[588px]'><AddIcon className='w-[35px] h-[35px]' onClick={handleAddSongClick} /></div>
-      {/* Add Song Modal */}
+      
       {isModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
           <div className="bg-white p-4 rounded-lg shadow-lg w-96">
